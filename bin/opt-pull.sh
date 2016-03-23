@@ -2,6 +2,7 @@
 
 DOTFILES=~/.dotfiles
 
+# TODO: make this less destructive; opt directory could contain useful files like Brewfile
 pushd $DOTFILES
 rm -rf opt
 mkdir -p opt

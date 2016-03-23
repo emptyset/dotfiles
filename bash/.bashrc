@@ -1,4 +1,4 @@
-TOPIC_BASH=${DOTFILES}/bash
+TOPIC_BASH=$DOTFILES/bash
 
 function load_sourcefiles {
     for SOURCE_FILE in *.bash; do
@@ -8,6 +8,8 @@ function load_sourcefiles {
         . $ALIAS_FILE
     done
 }
+
+. $TOPIC_BASH/private/.bashenv
 
 pushd $TOPIC_BASH
 load_sourcefiles
