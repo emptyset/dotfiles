@@ -52,7 +52,16 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew docker docker-compose git zsh-256color zsh-autosuggestions zsh-dircolors-solarized)
+plugins=()
+
+plugins+=(brew) 
+plugins+=(colored-man-pages)
+plugins+=(docker)
+plugins+=(docker-compose)
+plugins+=(git)
+plugins+=(zsh-256color)
+plugins+=(zsh-autosuggestions)
+plugins+=(zsh-dircolors-solarized)
 
 # User configuration
 
