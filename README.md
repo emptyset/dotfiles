@@ -6,16 +6,12 @@
     - *volatile* files change frequently
 - `private` and `volatile` files are `.gitignore`'d
 - dotfiles are organized by topic, with a typical folder structure:
-
-    .dotfiles/topic
-    .dotfiles/topic/private
-    .dotfiles/topic/volatile
-
+    - `.dotfiles/topic`
+    - `.dotfiles/topic/private`
+    - `.dotfiles/topic/volatile`
 - top-level `private` and `volatile` directories for one-off or minor topics:
-
-    .dotfiles/private
-    .dotfiles/volatile
-
+    -  `.dotfiles/private`
+    - `.dotfiles/volatile`
 - run `.dotfiles/bin/setup` to bootstrap everything
     - each `file`, with or without dot prefix, in all folders is symlinked via `$HOME/file`
 - shells like `zsh` and `bash` have some special files, which are sourced by the appropriate `*rc` file:
