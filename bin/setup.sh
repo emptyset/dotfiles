@@ -19,6 +19,7 @@ function symlink_target {
 }
 
 pushd $DOTFILES
+# NOTE: private and volatile are just other topics
 TOPICS=(`print -l ./*(/e:'[[ $REPLY != "./bin" && $REPLY != "./opt" ]]':)`)
 for TOPIC in $TOPICS; do
     # echo "topic: $TOPIC:t"
