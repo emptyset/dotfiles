@@ -1,31 +1,6 @@
 #!/usr/bin/env zsh
 
-# iterate through all topics (exclude bin/ opt/)
-# for each $TOPIC
-#   symlink every non-directory $FILE
-#     remove (or rename) existing $HOME/$FILE
-#     $HOME/$FILE -> $HOME/$DOTFILES/$TOPIC/$FILE
-#   symlink every non-directory private $FILE
-#     remove (or rename) existing $HOME/$FILE
-#     $HOME/$FILE -> $HOME/$DOTFILES/$TOPIC/private/$FILE
-#   symlink every non-directory volatile $FILE
-#     remove (or rename) existing $HOME/$FILE
-#     $HOME/$FILE -> $HOME/$DOTFILES/$TOPIC/volatile/$FILE
-
-DOTFILES=~/.dotfiles
-
-#pushd $DOTFILES
-#TOPICS=(${(f)$(find . -maxdepth 1 -type d -not \( -path . -o -path ./.git -o -path ./bin -o -path ./opt \))})
-#for TOPIC in $TOPICS; do
-#    echo "topic: $TOPIC"
-#    pushd $TOPIC
-#    TARGETS=(${(f)$(find . -maxdepth 1 -type f -not \( -name "*.bash" -o -name "*.alias" \))})
-#    for TARGET in $TARGETS; do
-#        echo "target: $TARGET"
-#    done
-#    popd
-#done
-#popd
+export DOTFILES=~/.dotfiles
 
 set extendedglob
 setopt null_glob
@@ -36,9 +11,11 @@ function list_targets {
 }
 
 function symlink_target {
-    #echo "mv $HOME/$2 $HOME/tmp/$2.moved"
-    #echo "ln -s $DOTFILES/$1/$2 $HOME/$2"
-    echo "$2"
+    #mv -v $HOME/$2 $HOME/tmp/$2.moved
+    SOURCE=$HOME/$2
+    TARGET=$DOTFILES/$1/$2
+    [[ -h $SOURCE ]] && rm -v $SOURCE
+    ln -vs $TARGET $SOURCE
 }
 
 pushd $DOTFILES
@@ -54,7 +31,7 @@ for TOPIC in $TOPICS; do
         TARGETS=()
         list_targets TARGETS
         for TARGET in $TARGETS; do
-            symlink_target $TOPIC:t $TARGET:t
+            symlink_target $FOLDER $TARGET:t
         done
         popd
     done

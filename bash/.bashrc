@@ -1,4 +1,10 @@
-TOPIC_BASH=$DOTFILES/bash
+pushd () { 
+    command pushd "$@" > /dev/null 
+}
+
+popd () { 
+    command popd "$@" > /dev/null 
+}
 
 function load_sourcefiles {
     for SOURCE_FILE in *.bash; do
@@ -8,6 +14,9 @@ function load_sourcefiles {
         . $ALIAS_FILE
     done
 }
+
+export DOTFILES=~/.dotfiles
+TOPIC_BASH=$DOTFILES/bash
 
 . $TOPIC_BASH/private/.bashenv
 
