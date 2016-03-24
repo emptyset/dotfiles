@@ -12,7 +12,7 @@
 - top-level `private` and `volatile` directories for one-off or minor topics:
     -  `.dotfiles/private`
     - `.dotfiles/volatile`
-- run `.dotfiles/bin/setup` to bootstrap everything
+- run `.dotfiles/bin/setup.sh` to bootstrap everything
     - each `file`, with or without dot prefix, in all folders is symlinked via `$HOME/file`
 - shells like `zsh` and `bash` have some special files, which are sourced by the appropriate `*rc` file:
     - `*.zsh` or `*.bash` files to configure a specific sub-topic
