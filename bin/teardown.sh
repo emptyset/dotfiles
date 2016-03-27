@@ -5,9 +5,11 @@ export DOTFILES=~/.dotfiles
 set extendedglob
 setopt null_glob
 
-pushd $HOME
-LINKS=(`print -l .*(e:'[[ -h $REPLY ]]':) *(.e:'[[ -h $REPLY ]]':)`)
-for LINK in $LINKS; do
-    rm -v $LINK
+pushd $DOTFILES
+TOPICS=(`print -l ./*(/e:'[[ $REPLY != "./bin" && $REPLY != "./opt" ]]':)`)
+for TOPIC in $TOPICS; do
+    stow -v -D $TOPIC:t
+    [[ -d "$TOPIC/private" ]] && stow -v -D -d $TOPIC:t -t $HOME private
+    [[ -d "$TOPIC/volatile" ]] && stow -v -D -d $TOPIC:t -t $HOME volatile
 done
 popd
