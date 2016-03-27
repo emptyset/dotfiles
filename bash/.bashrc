@@ -27,3 +27,6 @@ popd
 pushd $TOPIC_BASH/private
 load_sourcefiles
 popd
+
+# TODO: migrate this out of here (once *.bash script order scheme is established)
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
