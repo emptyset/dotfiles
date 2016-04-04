@@ -20,4 +20,6 @@ pushd $TOPIC_ZSH/private
 load_sourcefiles
 popd
 
+setopt clobber
+
 jot -rc 160 32 126 | rs -g 0 4 | cowsay -f hypnotoad | lolcat
