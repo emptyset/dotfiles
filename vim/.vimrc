@@ -53,6 +53,8 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 set viminfo+=n~/.vim/viminfo
+" remove trailing white spaces and ^Ms
+autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
 
 " visual settings
 set background=dark
