@@ -3,6 +3,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'mfukar/robotframework-vim'
 Plug 'scrooloose/syntastic'
@@ -10,7 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter' 
+Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 
 call plug#end()
