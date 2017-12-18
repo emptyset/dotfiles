@@ -14,6 +14,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
+Plug 'avakhov/vim-yaml'
 
 call plug#end()
 
@@ -41,7 +42,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-autocmd BufWritePost *.go :GoBuild
+"autocmd BufWritePost *.go :GoBuild
 
 " vim settings
 set hidden
@@ -80,6 +81,7 @@ set ruler
 "set number
 
 " input settings
+set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set expandtab
