@@ -14,6 +14,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
 Plug 'avakhov/vim-yaml'
 
 call plug#end()
@@ -27,7 +28,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 "let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 " vim-airline/vim-airline configuration
@@ -43,6 +44,9 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 "autocmd BufWritePost *.go :GoBuild
+
+" hashivim/vim-terraform configuration
+autocmd BufWritePost, *.tf :TerraformFmt
 
 " vim settings
 set hidden
