@@ -1,1 +1,2 @@
 alias cdp='cd $(pwd -P)'
+alias ls='gls --color=tty --group-directories-first'
