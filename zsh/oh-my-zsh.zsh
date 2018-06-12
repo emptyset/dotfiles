@@ -6,9 +6,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
-BULLETTRAIN_TIME_SHOW=false
 BULLETTRAIN_DIR_EXTENDED=2
-BULLETTRAIN_VIRTUALENV_SHOW=false
+BULLETTRAIN_PROMPT_ORDER=(
+    dir
+    git
+)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +56,7 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=()
 
-plugins+=(brew) 
+plugins+=(brew)
 plugins+=(colored-man-pages)
 plugins+=(docker)
 plugins+=(docker-compose)

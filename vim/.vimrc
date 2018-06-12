@@ -10,6 +10,7 @@ Plug 'mfukar/robotframework-vim'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'kchmck/vim-coffee-script'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -79,6 +80,8 @@ set smartcase
 " syntax highlighting settings
 syntax enable
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.thor set syntax=ruby
+au BufNewFile,BufRead *.hamlc set filetype=haml
 
 " buffer settings
 set ruler
