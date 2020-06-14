@@ -2,5 +2,3 @@ private
 volatile
 .*\.alias$
 .*\.zsh$
-
-fzf
