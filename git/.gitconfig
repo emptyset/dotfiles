@@ -1,0 +1,21 @@
+[user]
+    name = Alan Fay
+    email = alan@faysoftware.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    autocrlf = false
+    pager = less -S
+[alias]
+    br = branch
+    co = checkout
+    cm = commit -m
+    rb = rebase
+    lg = log --oneline
+    st = status
+[branch]
+    autosetuprebase = always
+[push]
+    default = simple
