@@ -29,7 +29,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_config_file='.flake8' " in the repo/project dir!
 
 " vim-airline/vim-airline configuration
 let g:airline_powerline_fonts = 1
@@ -43,7 +44,6 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-"autocmd BufWritePost *.go :GoBuild
 
 " hashivim/vim-terraform configuration
 autocmd BufWritePost, *.tf :TerraformFmt
@@ -67,6 +67,7 @@ autocmd BufRead,BufWritePre,FileWritePre * silent! %s/[\r \t]\+$//
 " visual settings
 set background=dark
 set t_Co=256
+let g:solarized_termcolors=256
 colorscheme solarized
 set laststatus=2
 
@@ -82,7 +83,6 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " buffer settings
 set ruler
-"set number
 
 " input settings
 set backspace=indent,eol,start

@@ -54,11 +54,11 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=()
 
-plugins+=(brew) 
+plugins+=(brew)
 plugins+=(colored-man-pages)
 plugins+=(docker)
 plugins+=(docker-compose)
-plugins+=(fzf)
+plugins+=(fzf-zsh)
 plugins+=(git)
 plugins+=(zsh-256color)
 plugins+=(zsh-autosuggestions)
