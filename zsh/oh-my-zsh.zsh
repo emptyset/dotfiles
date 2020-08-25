@@ -70,7 +70,6 @@ plugins+=(zsh-autosuggestions)
 plugins+=(zsh-dircolors-solarized)
 
 # User configuration
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -88,5 +87,3 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-

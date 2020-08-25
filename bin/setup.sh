@@ -1,10 +1,9 @@
 #!/usr/bin/env zsh
 
-export DOTFILES=~/.dotfiles
-
 set extendedglob
 setopt null_glob
 
+DOTFILES=~/.dotfiles
 pushd $DOTFILES
 stow -v stow
 TOPICS=(`print -l ./*(/e:'[[ $REPLY != "./bin" && $REPLY != "./opt" && $REPLY != ./stow ]]':)`)
