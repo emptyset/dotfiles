@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
+Plug 'cespare/vim-toml'
 Plug 'avakhov/vim-yaml'
 
 call plug#end()
@@ -91,3 +92,9 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set shiftround
+
+" input settings: python
+autocmd BufReadPre,BufNewFile *.py setlocal textwidth=79
+
+" input settings: markdown
+autocmd BufReadPre,BufNewFile *.md setlocal textwidth=79
