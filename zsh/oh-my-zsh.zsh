@@ -63,11 +63,12 @@ plugins+=(brew)
 plugins+=(colored-man-pages)
 plugins+=(docker)
 plugins+=(docker-compose)
-plugins+=(fzf-zsh)
+plugins+=(fzf)
 plugins+=(git)
-plugins+=(zsh-256color)
-plugins+=(zsh-autosuggestions)
-plugins+=(zsh-dircolors-solarized)
+# these may be potentially outdated...
+# plugins+=(zsh-256color)
+# plugins+=(zsh-autosuggestions)
+# plugins+=(zsh-dircolors-solarized)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
