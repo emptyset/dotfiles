@@ -1,3 +1,11 @@
+function log_debug {
+    if [[ -v DOTFILES_DEBUG ]]; then
+        echo "DEBUG: $1"
+    fi
+}
+
+log_debug "DOTFILES_DEBUG is set"
+
 function load_aliases {
     for ALIAS_FILE in *.alias; do
         source $ALIAS_FILE
@@ -9,6 +17,20 @@ function load_sourcefiles {
         source $SOURCE_FILE
     done
 }
+
+# Moved this up to the front, see if this helps
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/emptyset/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
 
 setopt null_glob
 setopt pushdsilent
