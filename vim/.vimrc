@@ -71,6 +71,8 @@ set t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
 set laststatus=2
+" enable background transparency
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 " visual text settings
 set showmatch
